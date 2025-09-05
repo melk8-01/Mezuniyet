@@ -1,0 +1,85 @@
+/* Genel ayarlar ve tam ekran arka plan */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    
+    /* Arka plan resmi */
+    background-image: url('arkaplan1.jpeg'); /* static klasörüne koy */
+    background-size: cover;      /* ekranı tamamen doldur */
+    background-position: center; /* ortala */
+    background-repeat: no-repeat;
+
+    /* Flexbox ile içerikleri yukarıya yasla ve ortala */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* yukarıya yasla */
+    align-items: center;
+
+    color: #fff; /* yazılar beyaz */
+}
+
+/* Bilgilendirme kutusu */
+.info-box {
+    max-width: 800px;
+    margin-top: 20px; /* biraz boşluk üstten */
+    padding: 20px 30px;
+    background-color: rgba(255, 255, 255, 0.3); /* şeffaf kutu */
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    font-size: 16px;
+    line-height: 1.5;
+    color: #fff; /* yazılar beyaz */
+}
+
+/* Ana container */
+.container {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.4); /* şeffaf kutu */
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    margin-top: 30px; /* container biraz aşağıda başlasın */
+    color: #fff; /* yazılar beyaz */
+}
+
+/* Başlık */
+h1 {
+    color: #f0fff0; /* açık yeşil ton */
+    margin-bottom: 25px;
+}
+
+/* Form stili */
+form {
+    margin-bottom: 25px;
+}
+
+input[type="file"] {
+    padding: 10px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #2e7d32;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 5px;
+}
+
+button:hover {
+    background-color: #1b5e20;
+}
+
+/* Yüklenen fotoğraf */
+img {
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    max-width: 400px;
+}
