@@ -5,15 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bitki Tanıma</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-
 </head>
 <body>
     <!-- Bilgilendirme yazısı -->
     <div class="info-box">
         <p>
-            Bu site sayesinde evde veya bahçede gördüğünüz bitkilerin hangisi olduğunu kolayca öğrenebilirsiniz. 
-            Fotoğrafını yükleyin, sistem bitkinin adını, zehirli/zehirsiz olup olmadığını, bakımını ve kullanım alanlarını size gösterecek. 
-            Böylece bitkiler hakkında hızlıca bilgi sahibi olabilirsiniz.
+            Bu site sayesinde gördüğünüz bitkilerin türünü kolayca tanıyabilirsiniz.
+            Aşağıdaki fotoğraf yükleme bölümüne her hangi bir bitkinin fotoğrafını yüklediğinizde, bitkinin adını, hakkında genel bilgileri, bakım bilgilerini ve kullanım alanlarını kolay bir şekilde öğrenebilirsiniz
         </p>
     </div>
 
@@ -27,8 +25,39 @@
 
         {% if resim %}
             <h2>Yüklenen Fotoğraf:</h2>
-            <img src="{{ resim }}" alt="Yüklenen Fotoğraf">
+            <img src="{{ resim }}" alt="Yüklenen Fotoğraf" width="300">
+        {% endif %}
+
+        {% if tahmin %}
+            <h2>Tahmin Sonucu:</h2>
+            <p><strong>Bitki Adı:</strong> {{ tahmin }}</p>
+            <p><strong>Güven Skoru:</strong> {{ confidence }}%</p>
+
+            <!-- Hızlı erişim yazısı -->
+            <div class="toc">
+                <p>Bu bitkinin <a href="#bakim">bakımı</a>, <a href="#kullanim">kullanım alanları</a>, <a href="#diger">diğer bilgiler</a> hakkında bilgi alabilirsiniz.</p>
+            </div>
         {% endif %}
     </div>
+
+    {% if tahmin %}
+    <!-- Bilgi kutuları sadece tahmin varsa gözüksün -->
+    <div class="bitki-info-outside">
+        <div class="info-box-large" id="bakim">
+            <h3>Bakımı</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. (Boşluk için örnek metin)</p>
+        </div>
+
+        <div class="info-box-large" id="kullanim">
+            <h3>Kullanım Alanları</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. (Boşluk için örnek metin)</p>
+        </div>
+
+        <div class="info-box-large" id="diger">
+            <h3>Diğer Bilgiler</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. (Boşluk için örnek metin)</p>
+        </div>
+    </div>
+    {% endif %}
 </body>
 </html>
