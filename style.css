@@ -5,53 +5,45 @@ body {
     margin: 0;
     padding: 0;
     min-height: 100vh;
-    
-    /* Arka plan resmi */
-    background-image: url('arkaplan1.jpeg'); /* static klasörüne koy */
-    background-size: cover;      /* ekranı tamamen doldur */
-    background-position: center; /* ortala */
-    background-repeat: no-repeat;
 
-    /* Flexbox ile içerikleri yukarıya yasla ve ortala */
+    background-color: #0636189c; 
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* yukarıya yasla */
+    justify-content: flex-start;
     align-items: center;
 
-    color: #fff; /* yazılar beyaz */
+    color: #dadada;
 }
 
 /* Bilgilendirme kutusu */
 .info-box {
     max-width: 800px;
-    margin-top: 20px; /* biraz boşluk üstten */
+    margin-top: 20px;
     padding: 20px 30px;
-    background-color: rgba(255, 255, 255, 0.3); /* şeffaf kutu */
+    background-color: #295338ae;
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0,0,0,0.5);
-    font-size: 16px;
+    font-size: 17px;
     line-height: 1.5;
-    color: #fff; /* yazılar beyaz */
+    color: #142719;
 }
 
 /* Ana container */
 .container {
     display: inline-block;
-    background-color: rgba(255, 255, 255, 0.4); /* şeffaf kutu */
+    background-color: #295338ae; 
     padding: 30px 40px;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0,0,0,0.5);
-    margin-top: 30px; /* container biraz aşağıda başlasın */
-    color: #fff; /* yazılar beyaz */
+    margin-top: 30px;
+    color: #142719; 
 }
 
-/* Başlık */
 h1 {
-    color: #f0fff0; /* açık yeşil ton */
+    color: #142719;
     margin-bottom: 25px;
 }
 
-/* Form stili */
 form {
     margin-bottom: 25px;
 }
@@ -62,7 +54,7 @@ input[type="file"] {
 }
 
 button {
-    background-color: #2e7d32;
+    background-color: #042d15ac;
     color: white;
     border: none;
     padding: 12px 20px;
@@ -73,13 +65,47 @@ button {
 }
 
 button:hover {
-    background-color: #1b5e20;
+    background-color: #0e4625b3;
 }
 
-/* Yüklenen fotoğraf */
 img {
     margin-top: 20px;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0,0,0,0.5);
     max-width: 400px;
+}
+
+/* Bitki bilgi kutuları */
+.info-box-large {
+    background-color: #295338ae; 
+    color: #142719;
+    padding: 30px 25px;
+    margin: 20px 0;
+    border-radius: 12px;
+    box-shadow: 0 0 25px rgba(0,0,0,0.6);
+    text-align: left;
+    max-width: 800px;
+}
+
+.info-box-large h3 {
+    margin-top: 0;
+    color: #124c3a;
+    font-size: 24px;
+}
+
+.info-box-large p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* İçindekiler / hızlı erişim linkleri */
+.toc a {
+    color: #f0f0f0;
+    text-decoration: underline;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.toc a:hover {
+    color: #000;
 }
